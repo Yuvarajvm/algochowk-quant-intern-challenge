@@ -16,25 +16,46 @@ import sys
 import numpy as np
 import pandas as pd
 
-# Add src to python path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+# Ensure workspace directory is in sys.path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, os.path.join(BASE_DIR, 'src'))
 
-from data_loader import fetch_nifty_data
-from event_engine import EventEngine
-from statistical_tests import (
-    analyze_horizons,
-    compute_summary_statistics,
-    bootstrap_confidence_interval,
-    run_comparative_hypothesis_tests
-)
-from backtester import EventBacktester
-from visualizer import (
-    plot_return_distribution,
-    plot_forward_returns_comparison,
-    plot_sensitivity_heatmap,
-    plot_equity_and_drawdowns,
-    plot_regime_comparison
-)
+try:
+    from src.data_loader import fetch_nifty_data
+    from src.event_engine import EventEngine
+    from src.statistical_tests import (
+        analyze_horizons,
+        compute_summary_statistics,
+        bootstrap_confidence_interval,
+        run_comparative_hypothesis_tests
+    )
+    from src.backtester import EventBacktester
+    from src.visualizer import (
+        plot_return_distribution,
+        plot_forward_returns_comparison,
+        plot_sensitivity_heatmap,
+        plot_equity_and_drawdowns,
+        plot_regime_comparison
+    )
+except ImportError:
+    from data_loader import fetch_nifty_data
+    from event_engine import EventEngine
+    from statistical_tests import (
+        analyze_horizons,
+        compute_summary_statistics,
+        bootstrap_confidence_interval,
+        run_comparative_hypothesis_tests
+    )
+    from backtester import EventBacktester
+    from visualizer import (
+        plot_return_distribution,
+        plot_forward_returns_comparison,
+        plot_sensitivity_heatmap,
+        plot_equity_and_drawdowns,
+        plot_regime_comparison
+    )
 
 
 def run_full_pipeline():
