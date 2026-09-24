@@ -53,7 +53,6 @@ This repository contains the complete quantitative research codebase, statistica
 │       └── regime_comparison.png
 ├── RESEARCH_NOTE.md                    # Formal 2-page quant research paper
 ├── AI_USAGE_NOTE.md                    # 1-page reflection on AI tools, decisions & learnings
-├── VIDEO_SCRIPT.md                     # 2-3 minute presentation script for video submission
 ├── run_pipeline.py                     # One-click master script to reproduce entire research
 ├── requirements.txt                    # Project dependencies
 └── README.md                           # Documentation & reproduction guide
@@ -121,7 +120,6 @@ Tested a 2D matrix of thresholds ($\theta \in \{-1.0\%, -1.5\%, -2.0\%, -2.5\%, 
 
 - [Research Note (2 Pages)](RESEARCH_NOTE.md)
 - [AI Usage Note (1 Page)](AI_USAGE_NOTE.md)
-- [Video Presentation Script (2-3 Minutes)](VIDEO_SCRIPT.md)
 - [Interactive Jupyter Notebook](notebooks/quant_research_nifty.ipynb)
 - [Master Pipeline Script](run_pipeline.py)
 - [Figures & Visualizations](reports/figures/)

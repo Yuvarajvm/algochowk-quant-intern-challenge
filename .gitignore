@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .venv/
+*.zip
+VIDEO_SCRIPT.md
+SUBMISSION_CHECKLIST_AND_STATUS.md
+convert_docs_to_pdf.py
+create_notebook.py
